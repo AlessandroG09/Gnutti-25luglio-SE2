@@ -1,0 +1,32 @@
+var express = require('express');
+var app = express();
+var fs = require("fs");
+
+var getFlightInfo = require('./getFlightInfo.js');
+var getFlights = require('./getFlights.js');
+var setFlights = require('./setFlights.js');
+
+
+
+//chiamata per la funzione getFlightInfo
+app.get('/getFlightInfo', function (req, res) {
+})
+
+//chiamata per la funzione getFlights
+app.get('/getFlights', function(req, res) {
+    
+})
+
+//chiamata con "put" per la funzione setFlight per definire nuovi voli
+app.put('./setFlights', function(req, res){
+    
+})
+
+var server = app.listen(8081, function () {
+
+  var host = server.address().address
+  var port = server.address().port
+
+  console.log("Example app listening at http://%s:%s", host, port)
+
+})
