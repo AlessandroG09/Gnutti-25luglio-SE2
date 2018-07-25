@@ -1,8 +1,11 @@
+
 module.exports = {
     
     getFlightInfo(flightCode){
-        var jsonFile = JSON.parse('/flights.json');
-        var 
+        var flights=JSON.parse(data);   
+        var id=flightCode;
+        var selectedFlight = data.id;
+        return data;
     }
-    
+  
 }

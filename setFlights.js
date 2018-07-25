@@ -1,6 +1,6 @@
 module.exports = {
     
-    setFlights(){
+    setFlights(flightCode, departure, arrival, delay){
         
     }
     
