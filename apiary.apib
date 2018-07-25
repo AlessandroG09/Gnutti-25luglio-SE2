@@ -55,7 +55,7 @@ Applicazione che ritorna informazioni sui voli in partenza e arrivo
 "paths": {
     "/getFlightInfo": {
           "get": {
-            "description": "",
+            "description": "Ritorna le informazioni del volo riguardante il codice; informazioni quali aeroporto di partenza, aeroporto di arrivo e delay",
             "operationId": "",
             "produces": [
             "application/json",
@@ -84,7 +84,7 @@ Applicazione che ritorna informazioni sui voli in partenza e arrivo
     },
     "/getFlights": {
       "get": {
-        "description": "",
+        "description": "Dato un codice di aeroporto e un selettore[arrival/departure] ritorna tutti i voli relativi all'aeroporto selezionato che hanno il selettore selezionato",
         "operationId": "",
         "produces": [
           "application/json",
@@ -109,8 +109,8 @@ Applicazione che ritorna informazioni sui voli in partenza e arrivo
         }
     },
     "/setFlights": {
-          "get": {
-        "description": "",
+          "put": {
+        "description": "Aggiungere nuovi voli",
         "operationId": "",
         "produces": [
           "application/json",
