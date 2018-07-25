@@ -3,7 +3,7 @@ HOST: http://polls.apiblueprint.org/
 
 # Gnutti-25luglio-SE2
 
-Polls is a simple API allowing consumers to view polls and vote in them.
+Applicazione che ritorna informazioni sui voli in partenza e arrivo
 
 ## Questions Collection [/questions]
 
@@ -32,49 +32,106 @@ Polls is a simple API allowing consumers to view polls and vote in them.
                 ]
             }
         ]
+        
+        
 
-### Create a New Question [POST]
-
-You may create your own question using this action. It takes a JSON
-object containing a question and a collection of answers in the
-form of choices.
-
-+ Request (application/json)
-
-        {
-            "question": "Favourite programming language?",
-            "choices": [
-                "Swift",
-                "Python",
-                "Objective-C",
-                "Ruby"
-            ]
-        }
-
-+ Response 201 (application/json)
-
-    + Headers
-
-            Location: /questions/2
-
-    + Body
-
-            {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 0
-                    }, {
-                        "choice": "Python",
-                        "votes": 0
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 0
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 0
-                    }
-                ]
+"swagger": "2.0",
+"info": {
+    "version": "1.0.0",
+    "title": "Airport",
+    "description": "",
+},
+    "host": "",
+    "basePath": "/",
+    "schemes": [
+        "http"
+    ],
+    "consumes": [
+        "application/json"
+    ],
+    "produces": [
+        "application/json"
+    ],
+"paths": {
+    "/getFlightInfo": {
+          "get": {
+            "description": "",
+            "operationId": "",
+            "produces": [
+            "application/json",
+            ],
+            "parameters": [
+                {
+                "flighCode"
+                }
+            ],
+        "responses": {
+          "200": {
+            "description": "flight info",
+            "schema": {
+              "type": "array",
+              "items": {
+              }
             }
+          },
+          "default": {
+            "description": "unexpected error",
+            "schema": {
+            }
+          }
+        }
+      }
+    },
+    "/getFlights": {
+      "get": {
+        "description": "",
+        "operationId": "",
+        "produces": [
+          "application/json",
+        ],
+        "parameters": [
+          {
+            "id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "pet response",
+            "schema": {
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "schema": {
+              "$ref": "#/definitions/ErrorModel"
+            }
+          }
+        }
+    },
+    "/setFlights": {
+          "get": {
+        "description": "",
+        "operationId": "",
+        "produces": [
+          "application/json",
+        ],
+        "parameters": [
+          {
+            "id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "pet response",
+            "schema": {
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "schema": {
+              "$ref": "#/definitions/ErrorModel"
+            }
+          }
+        }
+    }
+}
