@@ -1,0 +1,26 @@
+{
+    "1":{
+        departureAirport: 'MXP',
+        arrivalAirport: 'JFK',
+        delay: 37,
+        id: 'SQ388'
+    },
+    "2":{
+        departureAirport: 'JFK',
+        arrivalAirport: 'MXP',
+        delay: 17,
+        id: 'UA928'
+    },
+    "3":{
+        departureAirport: 'JFK',
+        arrivalAirport: 'FCO',
+        delay: 5,
+        id: 'UA988'
+    },
+    "4":{
+        departureAirport: 'FCO',
+        arrivalAirport: 'MXP',
+        delay: 0,
+        id: 'SQ476'
+    }
+}

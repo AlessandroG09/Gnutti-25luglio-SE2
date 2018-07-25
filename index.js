@@ -9,7 +9,8 @@ var setFlights = require('./setFlights.js');
 
 
 //chiamata per la funzione getFlightInfo
-app.get('/getFlightInfo', function (req, res) {
+app.get('/getFlightInfo:', function (req, res) {
+    
 })
 
 //chiamata per la funzione getFlights
@@ -27,6 +28,6 @@ var server = app.listen(8081, function () {
   var host = server.address().address
   var port = server.address().port
 
-  console.log("Example app listening at http://%s:%s", host, port)
+  console.log("Server running at http://%s:%s", host, port)
 
 })
